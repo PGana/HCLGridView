@@ -10,7 +10,7 @@ export class PaginationComponent implements OnInit {
   @Input() inputDataSource: any[];
   @Output() stepEmit = new EventEmitter();
   stepStartIndex = 1;
-  pageSize = 2;
+  pageSize = 5;
   dataSource: any[];
   curPageNo = 1;
   totalPages: number;
@@ -34,8 +34,8 @@ export class PaginationComponent implements OnInit {
       this.dataSource = this.inputDataSource.slice();
     }
     const len = this.dataSource.length;
-    const totPages = Math.floor(len / this.pageSize);
-    this.totalPages = totPages <= 1 ? 1 : totPages + 1;
+    const totPages = Math.ceil(len / this.pageSize);
+    this.totalPages = totPages;
     switch (step) {
       case 'next':
         this.stepStartIndex += this.pageSize;
@@ -48,8 +48,11 @@ export class PaginationComponent implements OnInit {
         break;
       case 'last':
         /// Removes the fraction values
-        const startIndex = Math.floor(len / this.pageSize);
-        this.stepStartIndex = (startIndex * this.pageSize) + 1;
+        //  const startIndex = Math.floor(len / this.pageSize);
+        this.stepStartIndex = ((this.totalPages * this.pageSize) - this.pageSize) + 1;
+
+        // const startIndex = Math.floor(len / this.pageSize);
+        // this.stepStartIndex = len - this.pageSize +1;
         break;
     }
     this.curPageNo = Math.floor(this.stepStartIndex / this.pageSize) + 1;

@@ -8,6 +8,6 @@ export class CourcesService {
   constructor(private http: HttpClient) { }
 
   getCources() {
-    return this.http.get('/assets/json/cource.mock.json');
+    return this.http.get('assets/json/cource.mock.json');
   }
 }
