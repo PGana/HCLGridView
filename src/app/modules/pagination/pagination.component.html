@@ -1,0 +1,16 @@
+<div style="text-align: right;" class="css-pagi" *ngIf="dataSource?.length">
+    <span style="flex: auto;"></span>
+    <label>Total Records : <span> {{dataSource.length}} </span></label> &nbsp;&nbsp;&nbsp;
+    <label>Current page : <span>{{curPageNo}} of {{totalPages}}</span></label>&nbsp;&nbsp;&nbsp;&nbsp;    
+    <select [(ngModel)]="pageSize" (change)="onChangePageSize(pageSize)">
+        <option value=2>2</option>
+        <option value=5>5</option>
+        <option value=10>10</option>
+        <option value=15>15</option>
+        <option value=20>20</option>
+    </select>
+    <button (click)="onStep('first')" [disabled]="curPageNo==1"><span class="material-icons" [style.opacity]="curPageNo==1 ? 0.5:1" > first_page </span> </button>
+    <button (click)="onStep('prev')" [disabled]="curPageNo==1"><span class="material-icons" [style.opacity]="curPageNo==1 ? 0.5:1">keyboard_arrow_left </span></button>
+    <button (click)="onStep('next')" [disabled]="curPageNo==totalPages"><span class="material-icons" [style.opacity]="curPageNo==totalPages ? 0.5:1">keyboard_arrow_right </span></button>
+    <button (click)="onStep('last')" [disabled]="curPageNo==totalPages"><span class="material-icons" [style.opacity]="curPageNo==totalPages ? 0.5:1">last_page </span></button>
+</div>

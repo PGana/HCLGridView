@@ -1,0 +1,34 @@
+
+/*
+Table Configuration
+*/
+.cus-table {
+    width: 100%;
+    border-collapse: collapse;
+    // border:k 1px solid #f1f1f1;
+}
+
+.cus-table th {
+    text-align: left;
+    padding: 16px 10px;
+    border-bottom: 1px solid #cac8c8;
+    font-weight: 500;
+    color: #828282;
+    cursor: pointer;
+    position: relative;
+}
+
+.cus-table td {
+    padding: 12px 10px;
+    border-bottom: 1px solid #dedddd;
+    color: #3e3e3e;
+}
+
+.cus-table th .material-icons {
+    font-size: 28px;
+    position: absolute;
+    margin-top: -6px;
+    margin-left: 6px;
+    color: #777cbf;
+}
+///.. End Table configuration

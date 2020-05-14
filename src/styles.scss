@@ -1,0 +1,30 @@
+/* You can add global styles to this file, and also import other style files */
+
+html {
+    height: 100%;
+}
+body {
+    font-family: "Roboto", sans-serif;
+    font-size: 14px;
+    margin: 0;
+    height: 100%;
+}
+
+full-h {
+    height: 100%;
+}
+
+.sub-heading {
+    color: #6e75ca;
+}
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-weight: 500 !important;
+}
+
+hr{
+    border: .2px solid #dedddd !important;
+}
