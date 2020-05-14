@@ -43,7 +43,7 @@
         "id": 10006,
         "name": "Engineering Models",
         "duration": 78,
-        "const": 6500,
+        "cost": 6500,
         "tutor": "MS. Radha",
         "startDate": "2020/09/23"
     },
@@ -51,7 +51,7 @@
         "id": 10007,
         "name": "Adobe Photoshop 2016",
         "duration": 52,
-        "const": 7400,
+        "cost": 7400,
         "tutor": "MS. Lakshmi",
         "startDate": "2020/11/12"
     },
@@ -59,7 +59,7 @@
         "id": 10008,
         "name": "Adobe Video Editing",
         "duration": 43,
-        "const": 2500,
+        "cost": 2500,
         "tutor": "Mr. Mini Rose",
         "startDate": "2020/12/02"
     },
@@ -67,7 +67,7 @@
         "id": 10009,
         "name": "CAD Models 2019",
         "duration": 78,
-        "const": 4500,
+        "cost": 4500,
         "tutor": "Mr. Jhosphine",
         "startDate": "2020/08/15"
     },
@@ -75,8 +75,48 @@
         "id": 100010,
         "name": "MS SQL Server for Beginners",
         "duration": 38,
-        "const": 700,
+        "cost": 700,
         "tutor": "Mr. Hopper",
         "startDate": "2020/07/25"
+    },
+    {
+        "id": 100011,
+        "name": "Boostrap 3 Tutorial",
+        "duration": 30,
+        "cost": 750,
+        "tutor": "Mr. Dinesh",
+        "startDate": "2020/08/03"
+    },
+    {
+        "id": 100012,
+        "name": "Vue UI/UX For Beginners",
+        "duration": 34,
+        "cost": 850,
+        "tutor": "Mr. Raman",
+        "startDate": "2020/08/03"
+    },
+    {
+        "id": 100013,
+        "name": "React JS A-Z",
+        "duration": 34,
+        "cost": 850,
+        "tutor": "Mr. Murphy",
+        "startDate": "2020/11/16"
+    },
+    {
+        "id": 100014,
+        "name": "HTML5 & CSS3 Fundamentals",
+        "duration": 40,
+        "cost": 950,
+        "tutor": "Mr. Happer",
+        "startDate": "2020/12/14"
+    },
+    {
+        "id": 100015,
+        "name": ".Net MVC Framework",
+        "duration": 60,
+        "cost": 0,
+        "tutor": "Mr. Vengat",
+        "startDate": "2020/07/01"
     }
 ]
