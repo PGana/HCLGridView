@@ -45,7 +45,7 @@
         "duration": 78,
         "const": 6500,
         "tutor": "MS. Radha",
-        "startDate": "2020/09/23",
+        "startDate": "2020/09/23"
     },
     {
         "id": 10007,
@@ -53,7 +53,7 @@
         "duration": 52,
         "const": 7400,
         "tutor": "MS. Lakshmi",
-        "startDate": "2020/11/12",
+        "startDate": "2020/11/12"
     },
     {
         "id": 10008,
@@ -61,7 +61,7 @@
         "duration": 43,
         "const": 2500,
         "tutor": "Mr. Mini Rose",
-        "startDate": "2020/12/02",
+        "startDate": "2020/12/02"
     },
     {
         "id": 10009,
@@ -69,7 +69,7 @@
         "duration": 78,
         "const": 4500,
         "tutor": "Mr. Jhosphine",
-        "startDate": "2020/08/15",
+        "startDate": "2020/08/15"
     },
     {
         "id": 100010,
@@ -77,6 +77,6 @@
         "duration": 38,
         "const": 700,
         "tutor": "Mr. Hopper",
-        "startDate": "2020/07/25",
+        "startDate": "2020/07/25"
     }
 ]
