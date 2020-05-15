@@ -10,7 +10,7 @@ Table Configuration
 
 .cus-table th {
     text-align: left;
-    padding: 16px 10px;
+    padding: 16px 16px 10px 0;
     border-bottom: 1px solid #cac8c8;
     font-weight: 500;
     color: #828282;
@@ -24,11 +24,20 @@ Table Configuration
     color: #3e3e3e;
 }
 
-.cus-table th .material-icons {
+.cus-table th .sort-icon {
     font-size: 28px;
     position: absolute;
-    margin-top: -6px;
-    margin-left: 6px;
+    margin-top: -6px;    
     color: #777cbf;
 }
 ///.. End Table configuration
+
+.cus-table .reorder-icon{
+    border: none;
+    background-color: transparent;
+    color: gray;
+    position: absolute;
+    font-size: 15px;
+    cursor: grab;
+    padding:0;
+}

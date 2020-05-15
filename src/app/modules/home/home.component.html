@@ -15,8 +15,9 @@
                     (dragstart)="onDrag(index)"
                     (dragover)="onDragOver($event)"
                     (drop)="onDrop(index)">
-                    {{col.text}}
-                    <span class="material-icons" *ngIf="activeSortColumn== col.val">{{!isAssendingOrder ?'keyboard_arrow_down':'keyboard_arrow_up'}} </span>
+                   <button class="material-icons reorder-icon">reorder</button> <span style="margin-left: 19px;"></span> 
+                   {{col.text}}
+                    <span class="material-icons sort-icon" *ngIf="activeSortColumn== col.val">{{!isAssendingOrder ?'keyboard_arrow_down':'keyboard_arrow_up'}} </span>
                 </th>
             </tr>
         </thead>
