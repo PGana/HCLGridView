@@ -13,6 +13,20 @@ export class HomeComponent implements OnInit {
   backupCources: ClassCources[];
   isAssendingOrder = true;
   activeSortColumn = 'id';
+
+  /// Drag-drop variables
+  startIndex: number;
+  endIndex: number;
+  columns = [
+    { text: 'Cource ID', val: 'id' },
+    { text: 'Cource Name', val: 'name' },
+    { text: 'Duration(Hrs)', val: 'duration' },
+    { text: 'Cost', val: 'cost' },
+    { text: 'Tutor', val: 'tutor' },
+    { text: 'Start Date', val: 'startDate' }
+  ];
+  /// ..End Drag and drop variable declaraion
+
   constructor(private $cource: CourcesService) { }
 
   ngOnInit(): void {
@@ -57,4 +71,32 @@ export class HomeComponent implements OnInit {
     /// Do default sort - Cource ID
     this.onSort(this.activeSortColumn, this.isAssendingOrder);
   }
+
+  /**----------------------------
+   * Table Column - Drag and Drop Implementation
+   */
+  onDrag(curIndex: number) {
+    this.startIndex = curIndex;
+    console.log('....drag called.....');
+    
+  }
+  onDragOver(ev: any) {
+    ev.preventDefault();
+  }
+  onDrop(oldIndex: number) {
+    this.endIndex = oldIndex;
+    this.onMoveIndex(this.columns, this.startIndex, this.endIndex);
+  }
+
+  /**
+   * This method helps to re-order the array's list
+   * @param arr Array list
+   * @param sIndex Start Index/From Index
+   * @param eIndex End Index / TO Index
+   * Ex : arr = [a,b,c,d], OnMoveIndex(arr, 1,3) // output : [a,d,b,c]
+   */
+  onMoveIndex(arr: any[], sIndex: number, eIndex: number) {
+    arr.splice(eIndex, 0, arr.splice(sIndex, 1)[0]);
+  }
+  /// ..End Drag-drop methods
 }

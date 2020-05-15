@@ -1,6 +1,6 @@
 <div class="full-h">
     <!------------------ Header of the Page  -->
-    <h3 class="sub-heading" style="margin-bottom: 0;">Online Cource</h3>
+    <h3 class="sub-heading" style="margin-bottom: 0;">Online Cources</h3>
     <span style="color: #777;">List of onlince cources are available for this year</span>
     <hr>
     <!-- ..End Page header -->
@@ -8,35 +8,22 @@
     <table class="cus-table" *ngIf="cources">
         <thead>
             <tr>
-                <th (click)="onSort('id', isAssendingOrder?false:true)">Cource ID<span class="material-icons"
-                        *ngIf="activeSortColumn=='id'">
-                        {{!isAssendingOrder ?'keyboard_arrow_down':'keyboard_arrow_up'}} </span> </th>
-                <th (click)="onSort('name',isAssendingOrder?false:true)">Cource Name<span class="material-icons"
-                        *ngIf="activeSortColumn=='name'">
-                        {{!isAssendingOrder ?'keyboard_arrow_down':'keyboard_arrow_up'}} </span> </th>
-                <th (click)="onSort('duration',isAssendingOrder?false:true)">Duration(Hours)<span class="material-icons"
-                        *ngIf="activeSortColumn=='duration'">
-                        {{!isAssendingOrder ?'keyboard_arrow_down':'keyboard_arrow_up'}} </span> </th>
-                <th (click)="onSort('cost',isAssendingOrder?false:true)">Cost<span class="material-icons"
-                        *ngIf="activeSortColumn=='cost'">
-                        {{!isAssendingOrder ?'keyboard_arrow_down':'keyboard_arrow_up'}} </span> </th>
-                <th (click)="onSort('tutor',isAssendingOrder?false:true)">Tutor<span class="material-icons"
-                        *ngIf="activeSortColumn=='tutor'">
-                        {{!isAssendingOrder ?'keyboard_arrow_down':'keyboard_arrow_up'}} </span> </th>
-                <th (click)="onSort('startDate',isAssendingOrder?false:true)">Start Date<span class="material-icons"
-                        *ngIf="activeSortColumn=='startDate'">
-                        {{!isAssendingOrder ?'keyboard_arrow_down':'keyboard_arrow_up'}} </span> </th>
-
+                <th 
+                    *ngFor="let col of columns;let index = index"
+                    (click)="onSort(col.val ,isAssendingOrder?false:true)"
+                    draggable="true"
+                    (dragstart)="onDrag(index)"
+                    (dragover)="onDragOver($event)"
+                    (drop)="onDrop(index)">
+                    {{col.text}}
+                    <span class="material-icons" *ngIf="activeSortColumn== col.val">{{!isAssendingOrder ?'keyboard_arrow_down':'keyboard_arrow_up'}} </span>
+                </th>
             </tr>
         </thead>
         <tbody>
             <tr *ngFor="let row of cources">
-                <td>{{row.id}}</td>
-                <td>{{row.name}}</td>
-                <td>{{row.duration|number}}</td>
-                <td>{{row.cost|currency:'INR'}}</td>
-                <td>{{row.tutor}}</td>
-                <td>{{row.startDate |date}}</td>
+                <td *ngFor="let col of columns">{{col.val == 'cost'?(row[col.val]|currency:'INR'): 
+                (col.val=='startDate'?(row[col.val]|date):row[col.val])}}</td>
             </tr>
         </tbody>
     </table>
