@@ -9,6 +9,29 @@
     padding: 0px 25px;
     letter-spacing: 1px;
 }
+
+/// Sidenav + page align
+.sidenav-page-container{
+    flex: auto; display:flex;flex-direction: row;overflow: auto;
+}
+
+/// Nav bar align
+.sidenav-page-container > nav{
+    width: 65px;background:#efefef;
+    overflow: auto;
+    display: inline-flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.sidenav-page-container > nav > a{
+color:#4e4e4e;
+padding: 9px 0;
+}
+.sidenav-page-container > nav > a > .material-icons{
+   font-size: 28px;
+    }
+///Page align
 .page-container {
     flex: auto;
     overflow: auto;
@@ -27,4 +50,11 @@
     color: white;
     font-size: 19px;
     margin: 12px 2px;
+}
+
+
+.nav-active{
+    color: #7e78e2 !important;
+    transition: all 0.3s ease-in-out;
+    background: white;
 }

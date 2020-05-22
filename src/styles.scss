@@ -15,7 +15,9 @@ full-h {
 }
 
 .sub-heading {
-    color: #6e75ca;
+    // color: #6e75ca;
+    color: #292929;
+    font-size: larger;
 }
 h1,
 h2,
@@ -27,4 +29,8 @@ h5 {
 
 hr{
     border: .2px solid #dedddd !important;
+}
+
+.material-icons{
+    user-select: none !important;
 }
