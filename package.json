@@ -2,8 +2,10 @@
   "name": "demo-grid",
   "version": "0.0.0",
   "scripts": {
-    "ng": "ng",
-    "build": "npm run build --prod"
+    "build": "ng build --prod",
+    "test": "ng test",
+    "lint": "ng lint",
+    "e2e": "ng e2e"
   },
   "private": true,
   "dependencies": {
