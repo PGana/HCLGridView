@@ -4,13 +4,16 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
+    "build": "ng build --prod",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
   },
   "private": true,
   "dependencies": {
+    "@angular/cli": "~9.1.5",
+    "@angular/compiler-cli": "~9.1.6",
+    "typescript": "~3.8.3",
     "@angular/animations": "~9.1.6",
     "@angular/common": "~9.1.6",
     "@angular/compiler": "~9.1.6",
