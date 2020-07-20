@@ -3,10 +3,7 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "build": "ng build --prod",
-    "test": "ng test",
-    "lint": "ng lint",
-    "e2e": "ng e2e"
+    "build": "npm run build --prod",
   },
   "private": true,
   "dependencies": {
