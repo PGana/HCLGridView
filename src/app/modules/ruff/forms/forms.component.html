@@ -1,0 +1,29 @@
+<h2>Form Validation</h2><br>
+
+<h3 style="color: lightsalmon;">Form Control </h3>
+<form (submit)="onFormControlSubmit(fControlName)">
+    <label for="name">Name</label>&nbsp;&nbsp;&nbsp;
+    <input type="text" [formControl]="fControlName" id="name"> &nbsp;&nbsp;&nbsp;
+    <button type="submit">Submit</button>
+    {{fControlName.hasError('email')}}
+</form>
+
+
+<h3 style="color:lightseagreen">Form Group</h3>
+<form (submit)="onFormGroupSubmit(fg)" [formGroup]="fg">
+   <label>Name</label> <input type="text" name="name" id="name" formControlName="name"> <br>
+   <label>Age</label> <input type="number" name="age" id="age" formControlName="age"><br>
+    <label>Address</label>
+
+   <label>Skills</label>
+   <ng-container formArrayName="skills">
+        <div *ngFor="let contol of skills.controls;let i=index" style="display: inline;">
+            <input type="text" [formControlName]="i">
+        </div>
+        <button type="button" (click)="onAddSkill()">Add Skills</button>
+    </ng-container> <br><br>
+
+    <button type="submit">submit</button>
+</form>
+
+{{fg.value|json}}
