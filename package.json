@@ -2,6 +2,7 @@
   "name": "demo-grid",
   "version": "0.0.0",
   "scripts": {
+    "ng":"ng",
     "build": "ng build --prod",
     "test": "ng test",
     "lint": "ng lint",
@@ -9,7 +10,6 @@
   },
   "private": true,
   "dependencies": {
-    "@angular-devkit/build-angular": "~0.901.5",
     "@angular/animations": "~9.1.6",
     "@angular/common": "~9.1.6",
     "@angular/compiler": "~9.1.6",
