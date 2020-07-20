@@ -118,5 +118,13 @@
         "cost": 0,
         "tutor": "Mr. Vengat",
         "startDate": "2020/07/01"
+    },
+    {
+        "id": 100016,
+        "name": "Kudu Script Tutorial",
+        "duration": 16,
+        "cost": 670,
+        "tutor": "Mr. Gana",
+        "startDate": "2020/09/20"
     }
 ]
