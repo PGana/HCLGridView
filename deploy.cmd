@@ -88,11 +88,7 @@ goto :EOF
 :Deployment
 echo Handling node.js deployment.
 
-:: 2. Select node version
-::call :SelectNodeVersion
- 
-
-:: 1. KuduSync
+:: 1. KuduSync - dist/[app name is important to copy to the azure wwwroot folder]
 IF /I "%IN_PLACE_DEPLOYMENT%" NEQ "1" (
   call :ExecuteCmd "%KUDU_SYNC_CMD%" -v 50 -f "%DEPLOYMENT_SOURCE%/dist/demoGrid" -t "%DEPLOYMENT_TARGET%" -n "%NEXT_MANIFEST_PATH%" -p "%PREVIOUS_MANIFEST_PATH%" -i ".git;.hg;.deployment;deploy.cmd"
   IF !ERRORLEVEL! NEQ 0 goto error
