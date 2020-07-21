@@ -1,3 +1,4 @@
 export const environment = {
-  production: true
+  production: true,
+  courcesUrl: 'https://nodecicdforangular.azurewebsites.net'
 };
